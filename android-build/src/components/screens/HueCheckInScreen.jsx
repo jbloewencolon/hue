@@ -5,7 +5,7 @@ import { useTranscription } from '../../hooks/useTranscription';
 import { SoundEngine } from '../../utils/SoundEngine';
 import { uuidv4, getTimeOfDay } from '../../utils/helpers';
 import { Repository } from '../../data/repository';
-import { Zap, Globe, Activity, Sprout, Heart, Briefcase, Lightbulb, Home, Flame, Anchor, CloudRain, Sparkles, Sun } from 'lucide-react'; // Need ICON_MAP icons here too or move ICON_MAP to utils
+import { Zap, Globe, Activity, Sprout, Heart, Briefcase, Lightbulb, Home, Flame, Anchor, CloudRain, Sparkles, Sun, Users } from 'lucide-react'; // Need ICON_MAP icons here too or move ICON_MAP to utils
 
 const ICON_MAP = { purple: Globe, blue: Activity, green: Sprout, jasmine: Sun, red: Heart, orange: Briefcase, white: Sparkles, black: Lightbulb, teal: Users, pink: Flame, brown: Anchor, gray: CloudRain };
 

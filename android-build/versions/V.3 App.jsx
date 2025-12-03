@@ -825,7 +825,7 @@ const LibraryScreen = ({ onBack }) => {
 
   return (
     <div className="h-full flex flex-col bg-canvas font-ink">
-      <div className="p-6 border-b border-stone-200/50 flex items-center justify-between sticky top-0 z-50 bg-white/80 backdrop-blur-md">
+      <div className="p-12 border-b border-stone-200/50 flex items-center justify-between sticky top-0 z-50 bg-white/80 backdrop-blur-md">
         <button onClick={() => { if(showGuide)setShowGuide(false); else if(selectedHue)setSelectedHue(null); else onBack(); }} className="p-3 hover:bg-stone-100 rounded-full"><ArrowLeft className="w-7 h-7 text-stone-700" /></button>
         <h2 className="font-bold text-2xl text-stone-900">{showGuide ? 'Guidebook' : (selectedHue ? selectedHue.name : 'Hue Library')}</h2>
         {/* Increased Guidebook Icon Size */}
@@ -1043,7 +1043,7 @@ const SpectrumScreen = ({ onBack }) => {
 
   return (
     <div className="h-full flex flex-col bg-canvas font-ink">
-      <div className="p-6 border-b border-stone-200/50 flex items-center justify-between sticky top-0 z-50 bg-white/80 backdrop-blur-md">
+      <div className="p-12 border-b border-stone-200/50 flex items-center justify-between sticky top-0 z-50 bg-white/80 backdrop-blur-md">
         <button onClick={() => { if(showGuide)setShowGuide(false); else onBack(); }} className="p-3 hover:bg-stone-100 rounded-full"><ArrowLeft className="w-7 h-7 text-stone-700" /></button>
         <h2 className="font-bold text-2xl text-stone-900 flex items-center gap-2"><TrendingUp className="w-5 h-5 text-emerald-500" /> {showGuide ? 'Guidebook' : 'Spectrum'}</h2>
         {/* Increased Guidebook Icon Size */}
@@ -1111,7 +1111,7 @@ const SettingsScreen = ({ onBack }) => {
 
   return (
     <div className="h-full flex flex-col bg-canvas font-ink">
-      <div className="p-6 border-b border-stone-200/50 flex items-center justify-between sticky top-0 z-50 bg-white/80 backdrop-blur-md">
+      <div className="p-12 border-b border-stone-200/50 flex items-center justify-between sticky top-0 z-50 bg-white/80 backdrop-blur-md">
         <button onClick={onBack} className="p-3 hover:bg-stone-100 rounded-full"><ArrowLeft className="w-7 h-7 text-stone-700" /></button>
         <h2 className="font-bold text-2xl text-stone-900">{showGuide ? 'Guidebook' : 'Settings'}</h2>
         <button onClick={() => { if(SoundEngine.playClick)SoundEngine.playClick(); setShowGuide(!showGuide); }} className="p-2 hover:bg-stone-100 rounded-full text-stone-500"><HelpCircle size={28} /></button>

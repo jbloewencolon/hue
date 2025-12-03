@@ -4,6 +4,7 @@ import { useHueContext } from '../../context/HueContext';
 import useSound from '../../hooks/useSound';
 import { Repository } from '../../data/repository';
 import Guidebook from '../ui/Guidebook';
+import { Globe, Activity, Sprout, Sun, Heart, Briefcase, Sparkles, Lightbulb, Users, Flame, Anchor, CloudRain } from 'lucide-react';
 
 
 export const SettingsScreen = ({ onBack }) => {
@@ -34,7 +35,7 @@ export const SettingsScreen = ({ onBack }) => {
 
   return (
     <div className="h-full flex flex-col bg-canvas font-ink">
-      <div className="p-6 border-b border-stone-200/50 flex items-center justify-between sticky top-0 z-50 bg-white/80 backdrop-blur-md">
+      <div className="p-12 border-b border-stone-200/50 flex items-center justify-between sticky top-0 z-50 bg-white/80 backdrop-blur-md">
         <button onClick={onBack} className="p-3 hover:bg-stone-100 rounded-full"><ArrowLeft className="w-7 h-7 text-stone-700" /></button>
         <h2 className="font-bold text-2xl text-stone-900">{showGuide ? 'Guidebook' : 'Settings'}</h2>
         <button onClick={() => { if(SoundEngine.playClick)SoundEngine.playClick(); setShowGuide(!showGuide); }} className="p-2 hover:bg-stone-100 rounded-full text-stone-500"><HelpCircle size={28} /></button>

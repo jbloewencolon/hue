@@ -5,6 +5,7 @@ import { COLOR_DOMAINS } from '../../data/hues';
 import { SoundEngine } from '../../utils/SoundEngine';
 import Guidebook from '../ui/Guidebook';
 import SeasonalHuesChart from './SeasonalHuesChart';
+import { Globe, Activity, Sprout, Sun, Heart, Briefcase, Sparkles, Lightbulb, Users, Flame, Anchor, CloudRain } from 'lucide-react';
 
 const polarToCartesian = (cx, cy, r, angleDeg) => { const rad = ((angleDeg - 90) * Math.PI) / 180.0; return { x: cx + r * Math.cos(rad), y: cy + r * Math.sin(rad) }; };
 const describeSector = (cx, cy, r, startAngle, endAngle) => { const start = polarToCartesian(cx, cy, r, startAngle); const end = polarToCartesian(cx, cy, r, endAngle); const largeArcFlag = endAngle - startAngle <= 180 ? '0' : '1'; return ['M', cx, cy, 'L', start.x, start.y, 'A', r, r, 0, largeArcFlag, 1, end.x, end.y, 'Z'].join(' '); };
@@ -29,7 +30,7 @@ export const SpectrumScreen = ({ onBack }) => {
 
   return (
     <div className="h-full flex flex-col bg-canvas font-ink">
-      <div className="p-6 border-b border-stone-200/50 flex items-center justify-between sticky top-0 z-50 bg-white/80 backdrop-blur-md">
+      <div className="p-12 border-b border-stone-200/50 flex items-center justify-between sticky top-0 z-50 bg-white/80 backdrop-blur-md">
         <button onClick={() => { if(showGuide)setShowGuide(false); else onBack(); }} className="p-3 hover:bg-stone-100 rounded-full"><ArrowLeft className="w-7 h-7 text-stone-700" /></button>
         <h2 className="font-bold text-2xl text-stone-900 flex items-center gap-2"><TrendingUp className="w-5 h-5 text-emerald-500" /> {showGuide ? 'Guidebook' : 'Spectrum'}</h2>
         {/* Increased Guidebook Icon Size */}

@@ -1,5 +1,21 @@
 import React from 'react';
 import { getX } from '../../utils/helpers';
+import { Globe, Activity, Sprout, Sun, Heart, Briefcase, Sparkles, Lightbulb, Users, Flame, Anchor, CloudRain } from 'lucide-react';
+
+const ICON_MAP = { 
+  purple: Globe, 
+  blue: Activity, 
+  green: Sprout, 
+  jasmine: Sun, 
+  red: Heart, 
+  orange: Briefcase, 
+  white: Sparkles, 
+  black: Lightbulb, 
+  teal: Users, 
+  pink: Flame, 
+  brown: Anchor, 
+  gray: CloudRain 
+};
 
 export const SeasonalHuesChart = ({ entries, timeRange, color }) => {
   const width = 300; const height = 100; const padding = 10;

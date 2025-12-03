@@ -1,10 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowLeft, HelpCircle, Info, Zap, Globe, Activity, Sprout, Heart, Briefcase, Lightbulb, Home, Flame, Anchor, CloudRain, Sparkles, Sun, Edit2, Trash2 } from 'lucide-react';
+import { ArrowLeft, HelpCircle, Info, Zap, Globe, Activity, Sprout, Heart, Briefcase, Lightbulb, Home, Flame, Anchor, CloudRain, Sparkles, Sun, Users, Edit2, Trash2 } from 'lucide-react';
 import { Repository } from '../../data/repository';
 import { SoundEngine } from '../../utils/SoundEngine';
 import { COLOR_DOMAINS } from '../../data/hues';
 import Guidebook from '../ui/Guidebook';
-
+const ICON_MAP = { 
+  purple: Globe, 
+  blue: Activity, 
+  green: Sprout, 
+  jasmine: Sun, 
+  red: Heart, 
+  orange: Briefcase, 
+  white: Sparkles, 
+  black: Lightbulb, 
+  teal: Users, 
+  pink: Flame, 
+  brown: Anchor, 
+  gray: CloudRain 
+};
 
 export const LibraryScreen = ({ onBack }) => {
   const [selectedHue, setSelectedHue] = useState(null);
@@ -41,7 +54,7 @@ export const LibraryScreen = ({ onBack }) => {
 
   return (
     <div className="h-full flex flex-col bg-canvas font-ink">
-      <div className="p-6 border-b border-stone-200/50 flex items-center justify-between sticky top-0 z-50 bg-white/80 backdrop-blur-md">
+      <div className="p-12 border-b border-stone-200/50 flex items-center justify-between sticky top-0 z-50 bg-white/80 backdrop-blur-md">
         <button onClick={() => { if(showGuide)setShowGuide(false); else if(selectedHue)setSelectedHue(null); else onBack(); }} className="p-3 hover:bg-stone-100 rounded-full"><ArrowLeft className="w-7 h-7 text-stone-700" /></button>
         <h2 className="font-bold text-2xl text-stone-900">{showGuide ? 'Guidebook' : (selectedHue ? selectedHue.name : 'Hue Library')}</h2>
         {/* Increased Guidebook Icon Size */}
